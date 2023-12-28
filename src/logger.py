@@ -122,7 +122,7 @@ class Logger(object):
                 print(colored('Logs will be synced with wandb.', 'blue', attrs=['bold']))
                 self._wandb = wandb
             except:
-                print(colored('Warning: failed to init wandb. Logs will be saved locally.', 'yellow'), attrs=['bold'])
+                print(colored('Warning: failed to init wandb. Logs will be saved locally.', 'yellow', attrs=['bold']))
                 self._wandb = None
         self._video = VideoRecorder(log_dir, self._wandb) if self._wandb and cfg.save_video else None
 
